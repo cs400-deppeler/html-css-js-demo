@@ -1,0 +1,133 @@
+body
+{
+font-family: arial;
+background-image:url('background-image.jpg');
+text-align: center;
+padding-left: 10%; padding-right: 10%;
+}
+
+h1, h2 { 
+font-family: arial;
+}
+
+h1 {
+font-weight: bold;
+font-size: 20pt;
+}
+
+h3 { 
+font-weight: bold;
+font-style: italic;
+font-size: 18pt;
+color: #336600;
+}
+
+p { 
+font-family: arial;
+font-weight: bold;
+}
+img { border: 0; }
+a:link, a:hover, a:active, a:visited{
+   text-decoration: none;
+}
+
+#priceButton {
+border: 0; color: blue;
+background-image:url(background-image.jpg);
+}
+
+#gmap {
+ width: 300px; 
+height: 300px; 
+border: 0; 
+}
+table.tablealign{ text-align: center; border: 0; }
+#aligncenter { text-align: center; }
+#container { 
+text-align:center; font-family:Arial, Helvetica, sans-serif; 
+background-image:url(background-image.jpg); 
+}
+
+#brownHeading {
+	  font-family: arial;
+	  font-size: 16pt;
+	  color: #336600;
+	}
+
+	td {
+	  padding: 7px;
+	  text-align: center;
+	  vertical-align: top;
+	}
+	
+	.highlight {
+	  color: #3366ff;
+	  font-style: italic;
+	  font-weight: bold;
+	}
+	
+	.shaded {
+	  background-color: #cccccc;
+	}
+	
+	#main {
+	   font-family: times;
+	   font-size: 12pt;
+	}
+	
+	#title {
+		text-align: center;
+		font-weight: bold;
+		font-size: 18pt;
+		color: #3366ff;
+	}
+	
+	#blueBox {
+	  padding: 10px;
+	  border: 3px double #ccc;
+	  margin:0 -5px;
+	  font-size: 12pt;
+	  text-align: left;
+	}
+	
+	#blueHeading {
+	  font-size: 14pt;
+	  color: #3366ff;
+	}
+	
+	.blueSubHeading {
+	  font-size: 12pt;
+	  color: #336699;
+	}
+	
+	#center {
+	  text-align: center;
+	}
+
+	#photoBox {
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+	  border: 0 solid #ddd;
+	}
+	
+	#siteNavigation {
+	  color: red;
+	}
+.special { 
+padding-top: 5px;
+padding-bottom: 5px;
+background-color: #6699ff;
+border-color: blue;
+border: 2px;
+color: yellow; 
+font-family: Georgia;
+font-weight: bold;
+font-size: 2em;
+}
+	
+	#address {
+	  font-family: arial;
+	  font-size: 8pt;
+	  text-align: center;
+	  color: #996633;
+	}

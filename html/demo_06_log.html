@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo 06 Log</title>
+
+   <!-- Example to add a button to create a download link
+     http://jsfiddle.net/UselessCode/qm5AG/#
+   -->
+   <style type="text/css">
+     header { color: blue; }
+   </style>
+
+   <script>
+      var logString = "";
+
+      // add date -> msg to the logString
+      function log(msg) {
+         if (msg=="") return;
+         var date = new Date();
+         var logmsg = (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() + " -> " + msg;
+         logString += logmsg + "<br>";
+         document.getElementById("log").innerHTML = logString;
+      }
+
+      function clearLog() {
+         logString = "";
+         document.getElementById("log").innerHTML = logString;
+      }
+
+
+      // Modified from examples found at:
+      // https://stackoverflow.com/questions/13405129/javascript-create-and-save-file
+      function downloadLog() {
+         var content = logString.replace(/<br>/gi,"\n");
+         var filename = "log.txt";
+         var contentType = "text/plain";
+
+         if(!contentType) contentType = 'application/octet-stream';
+         var a = document.createElement('a');
+         var blob = new Blob([content], {'type':contentType});
+         a.href = window.URL.createObjectURL(blob);
+         a.download = filename;
+         a.click();
+      }
+</script>
+</head>
+
+<body>
+  <header>
+    <h1>Demo 6 Log</h1>
+  </header>
+
+  <p>See html code for example of:</p>
+  <ul>
+    <li>using a regular expression in string.replace(regex,text)</li>
+    <li>write to a downloadable file using window.URL.createObjectURL</li>
+    <li>write to a downloadable file using anchor and download attribute</li>
+  </ul>
+
+  <button id="clear" onclick="clearLog()">Clear Log</button><br>
+  <input type="text" id="msg" onchange="log(this.value);this.value=''" /><br>
+  <p id="log" background-color="yellow"></p>
+  <button onclick="downloadLog()">downloadLog()</button><br>
+  <hr>
+  <a download="hello.txt" href="data:application/octet-stream,Hello%20World!">Click this link to download "Hello World!" to a hello.txt</a><br>
+
+</body>
+
+</html>

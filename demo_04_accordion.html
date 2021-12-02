@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo 04 Accordion</title>
+
+<!-- ADDS an accordion box to the web page
+From: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion
+<!-- -->
+<style type="text/css">
+header { color: blue; }
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc; 
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+</style>
+
+</head>
+
+<body>
+<header>
+  <h1>Demo 4 Accordion</h1>
+</header>
+
+    <button class="accordion">cs200</button>
+    <div class="panel">
+    <p>The first course in the intro sequence.</p>
+    </div>
+
+    <button class="accordion">cs300</button>
+    <div class="panel">
+    <p>The second course in the intro sequence.</p>
+    </div>
+
+    <button class="accordion">cs400</button> 
+    <div class="panel">
+    <p>The third course in the intro sequence.</p>
+    </div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+</body>
+
+</html>

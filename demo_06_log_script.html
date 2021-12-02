@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo 06 Log</title>
+
+   <!-- Example to add a button to create a download link
+     http://jsfiddle.net/UselessCode/qm5AG/#
+   -->
+   <style type="text/css">
+     header { color: blue; }
+   </style>
+   <script src="scripts.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Demo 6 Log</h1>
+  </header>
+
+  <p>TODO: complete implementation</p>
+
+  <button id="clear" onclick="clearLog()">Clear Log</button><br>
+  <input type="text" id="msg" onchange="log(this.value);" /><br>
+  <p id="log" background-color="yellow"></p>
+  <button onclick="download(document.getElementById('log'), 'log.txt', 'text/plain')">Save log to a file (not working yet)</button>
+
+</body>
+
+</html>

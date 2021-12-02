@@ -1,0 +1,4 @@
+#!/bin/csh
+foreach f ( `ls *.html` )
+cp $f $f.txt
+end

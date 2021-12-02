@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo 07 photos</title>
+
+  <!-- ADDS a button to save a file
+    http://jsfiddle.net/UselessCode/qm5AG/#
+  -->
+  <style type="text/css">
+    header { color: blue; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Demo 7 Photos</h1>
+  </header>
+
+  <p>TODO: complete this implementation or <br>
+  <a href="album/index.html">See album/index.html</a></p>
+
+  <button id="clear" onclick="clearLog()">Clear Log</button><br>
+  <input type="text" id="msg" onchange="log(this.value);" /><br>
+  <p id="log"></p>
+
+  <script>
+    var logString = "";
+
+    // add date -> msg to the logString
+    function log(msg) {
+      if (msg=="") return;
+      var date = new Date();
+      var logmsg = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear() + " -> " + msg;
+      logString += logmsg + "<br>";
+      document.getElementById("log").innerHTML = logString;
+    }
+
+    function clearLog() {
+      logString = "";
+      document.getElementById("log").innerHTML = logString;
+    }
+  </script>
+</body>
+
+</html>

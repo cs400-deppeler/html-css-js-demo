@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Demo 01</title>
+
+<!-- ADDS HTML5 support to other browsers
+<!-- -->
+<style type="text/css">
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+header { color: blue; }
+</style>
+
+</head>
+
+<body>
+<header>
+  <h1>Demo 2</h1>
+</header>
+    <p>This is a basic html page without style sheet or javascript.</p>
+</body>
+
+</html>

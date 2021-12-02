@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo 08 Form</title>
+
+   <!-- Example to add a button to create a download link
+     http://jsfiddle.net/UselessCode/qm5AG/#
+   -->
+   <style type="text/css">
+     header { color: blue; }
+   </style>
+</head>
+
+<body>
+  <header>
+    <h1>Demo 8 Form</h1>
+  </header>
+
+<p>TODO: complete implementation</p>
+
+<form action="/action_page.php" method="get" target="_self">
+  First name:<br><input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br> <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+
+</html>

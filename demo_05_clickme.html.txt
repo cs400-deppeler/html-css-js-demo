@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo 05 Click Me Button</title>
+
+  <!-- ADD a button to the web page
+  https://www.w3schools.com/jsref/event_onclick.asp
+  -->
+  <style type="text/css">
+    header { color: blue; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Demo 5 Click Me</h1>
+  </header>
+
+  <button id="click" onclick="clickMe()">Click Me</button><br>
+  <label id="tally"> </label>
+  <p id="count"> </p>
+
+  <script>
+    var n = 0;
+    function clickMe() {
+      n += 1;
+      var button = document.getElementById("click");
+      var tally = document.getElementById("tally");
+      var count = document.getElementById("count");
+      if ( button.innerHTML == "Click Me" ) {
+        button.innerHTML = "Don't Click Me";
+        tally.innerHTML += "1" ; <!-- up arrow "&uarr;"; -->
+      } else {
+        button.innerHTML = "Click Me";
+        tally.innerHTML += "0" ; <!-- down arrow "&darr;"; -->
+      }
+      count.innerHTML = "" + n;
+    }
+  </script>
+</body>
+</html>

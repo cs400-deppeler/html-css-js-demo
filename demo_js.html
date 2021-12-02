@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script lang="JavaScript">
+	
+	var s1 = { name: "Deb", pets: [ "Bo", "Kitty" ], course: "cs400" };
+
+	function nextPet() {
+		if ( typeof nextPet.index == 'undefined' ) {
+			nextPet.index = 0;
+		}
+
+		document.getElementById('debPet').innerHTML = s1.pets[nextPet.index];
+		console.log(s1.pets[nextPet.index]);
+
+		// set up for the next button click
+		if (++nextPet.index >= s1.pets.length) {
+			nextPet.index = 0;
+		}
+	}
+</script>
+</head>
+<body>
+<button type="button" onClick=nextPet()>Click to see next Pet Name</button>
+<label id="debPet">
+</label>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number Form</title>
+	<script language="JavaScript">
+		var list ="";
+
+		function checkIt(event) {
+			evt = (event) ? event : window.event;
+			var charCode = (event.which) ? event.which : event.keyCode;
+			if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+				status = "This field accepts numbers only.";
+				document.getElementById('status').innerHTML=status;
+				return false;
+			}
+			if (charCode==13) { // enter key was typed
+				var value = document.getElementById('number').value
+
+				if (value!="") {
+					list = document.getElementById('list').innerHTML + "<br>" + value
+					document.getElementById('list').innerHTML = list
+
+					document.getElementById('status').innerHTML = "added "+value+" to list"
+					document.getElementById('number').value = ""	
+				}
+				return true;
+			}
+			return true;
+		}
+
+
+
+
+
+
+
+
+		
+	</script>
+</head>
+<body>
+	<h1>Number Form</h1>
+	<hr>
+	<form onSubmit="return false">
+		Enter any positive integer: <input type="text" id="number"
+		onKeyPress="return checkIt(event)" >
+	</form>
+	<hr>
+		<h2>List</h2><p id='list'></p>
+
+
+	<hr>
+	<footer>Status: <span id='status'></span></p></footer>
+</body>
+</html>

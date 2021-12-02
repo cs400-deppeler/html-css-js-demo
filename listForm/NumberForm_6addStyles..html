@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number Form</title>
+	<style type="text/css">
+		body { 
+			font-family: Arial, sans-serif; 
+		}
+		h1,h2 { 
+			font-family: serif; 
+		}
+		h1 {
+			font-size: 2.0em; 
+			color: blue; 
+		}
+		h2 {
+			text-decoration: underline;
+		}
+		footer { 
+			background-color: gray; 
+			color: white; 
+		}
+		#status {
+			color: yellow;
+		}	
+	</style>
+	<script language="JavaScript">
+		var list ="";
+		var sum = 0;
+		function checkIt(event) {
+			evt = (event) ? event : window.event;
+			var charCode = (event.which) ? event.which : event.keyCode;
+			if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+				status = "This field accepts numbers only.";
+				document.getElementById('status').innerHTML=status;
+				return false;
+			}
+			if (charCode==13) { // enter key was typed
+				var value = document.getElementById('number').value
+				sum = sum + parseInt(value)
+				if (value!="") {
+					list = document.getElementById('list').innerHTML + "<br>" + value
+					document.getElementById('list').innerHTML = list
+					document.getElementById('sum').innerHTML = sum
+					document.getElementById('status').innerHTML = "added "+value+" to list"
+					document.getElementById('number').value = ""	
+				}
+				return true;
+			}
+			return true;
+		}
+		function clearForm() {
+			list = status = ''
+			sum = 0
+			document.getElementById('number').value=''
+			document.getElementById('list').innerHTML=list
+			document.getElementById('sum').innerHTML=''+sum
+			document.getElementById('status').innerHTML=status
+		}
+		
+	</script>
+</head>
+<body>
+	<h1>Number Form</h1>
+	<hr>
+	<form onSubmit="return false">
+		Enter any positive integer: <input type="text" id="number"
+		onKeyPress="return checkIt(event)" >
+	</form>
+	<hr>
+		<h2>List</h2><p id='list'></p>
+		<p>Sum = <span id='sum'>0</span></p>
+		<button onClick="clearForm(event)">Clear List</button>
+	<hr>
+	<footer>Status: <span id='status'></span></p></footer>
+</body>
+</html>

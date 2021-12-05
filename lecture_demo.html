@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Exams</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="myscript.js">
+	<script src="myscript.js"></script>
   </head>
 
   <body>
     <header><h1>Exam Information</h1></header>
 
     <!-- display course calendar -->
-    <img src = "examrooms.png" 
+    <img src = "examrooms_202109.png" width="800"
          alt = "Final Exam Dec 15 th 2021 6-8pm" />
 
     <table>
+	  <tr><th>Exam</th><th>Time</th><th>Date</th></tr>
       <tr><th>Midterm</th><td>6:30 PM - 8:30 PM</td><td>October 20th</td></tr>
       <tr><th>Final Exam</th><td>6:00PM – 8:00 PM</td><td>Dec 15th</td></tr>
     </table>
@@ -31,6 +32,17 @@
         <dt>Term</dt> <dd>definition</dd>
     </dl>
 
+	<form oninput="outC.value=Math.round( ( (parseInt(inF.value)-32 ) * 5.0 / 9 ) * 100 + Number.EPSILON) / 100">
+	Temperature in Fahrenheit <input type="number" id="inF" size="4"></input> F = 
+	<output name="outC" for "inF"></output> C
+	</form>
+
+	<!-- F = C*9/5+32 -->
+	<form oninput="outF.value=getFahrenheit(inC.value)">  Temperature in Celsius 
+	<input type="number" id="inC" size="4"></input> C = 
+	<output name="outF" for "inC"></output> F
+</form>
+ 
     <footer>
       <p><a href="home.html">Home Page</a> <br>
       Report broken links and accessibility problems to: deppeler
@@ -38,3 +50,4 @@
 
   </body>
 </html>
+
